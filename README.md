@@ -1,24 +1,14 @@
-# README
+# **タスク管理アプリ**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+* 家庭内のタスク管理が必要となり、既製品で良いツールがなかったため、自分が使いやすいタスク管理ツールを作成
 
-Things you may want to cover:
 
-* Ruby version
+## 設計書
+  ### ER図、画面遷移図
+  https://drive.google.com/file/d/1vLhn5NcQjQFnphxyt-p0YYnSIJiV7y3g/view?usp=sharing
 
-* System dependencies
+  ### アプリケーション詳細設計、テーブル定義書
+  https://docs.google.com/spreadsheets/d/12EKfDhwEcBoZ8rMS-Wa1ZQh2m-GT3vC2mXp58FLYVPg/edit?usp=sharing
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用方法
