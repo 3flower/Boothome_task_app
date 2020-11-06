@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
   def top
     # new
-
+    @task = Task.new
     # edit
 
     # index
