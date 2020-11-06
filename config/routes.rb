@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'tasklists#top'
+
+  resources :tasks, only: [:create, :update, :destroy]
+  root 'tasks#top'
+
   devise_for :users
 end
