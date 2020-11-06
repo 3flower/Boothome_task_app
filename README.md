@@ -12,3 +12,5 @@
   https://docs.google.com/spreadsheets/d/12EKfDhwEcBoZ8rMS-Wa1ZQh2m-GT3vC2mXp58FLYVPg/edit?usp=sharing
 
 ## 使用方法
+
+## 所要時間
