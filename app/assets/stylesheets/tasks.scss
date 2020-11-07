@@ -60,4 +60,40 @@ label {
 .index {
   width: 65%;
   float: right;
+  .category-box {
+    margin-bottom: 0 !important;
+    padding-bottom: 3px;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 30px 10px;
+    }
+  }
+  .category-btn {
+    text-align: center;
+    .not-box {
+      width: 8%;
+      text-align: center;
+      padding: 2px 5px;
+      border: 1px solid #000;
+      border-radius: 100px;
+      background-color: #FF82B2;
+    }
+    .commencement-box {
+      width: 8%;
+      text-align: center;
+      padding: 2px 5px;
+      border: 1px solid #000;
+      border-radius: 100px;
+      background-color: #99FFFF;
+    }
+    .completion-box {
+      width: 6%;
+      text-align: center;
+      background-color: #FFFF66;
+      padding: 2px 5px;
+      border: 1px solid #000;
+      border-radius: 100px;
+    }
+  }
 }

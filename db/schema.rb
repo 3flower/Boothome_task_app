@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_062537) do
     t.integer "user_id"
     t.string "title"
     t.string "content"
-    t.integer "progress"
+    t.integer "progress", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -53,5 +53,23 @@
   </div>
 </div>
 <div class="index">
-
+  <div class="category-btn">
+    <ul class="category-box">
+      <li class="not-box" id="not-btn">未着手</li>
+      <li class="commencement-box" id="commencement-btn">着手中</li>
+      <li class="completion-box" id="completion-btn">完了</li>
+    </ul>
+  </div>
+  <div id="task-all-index">
+    <%#= render "task_index", tasks: @tasks %>
+  </div>
+  <div id="task-not-index">
+    <%#= render "task_index", tasks: @tasks_not %>
+  </div>
+  <div id="task-commencement-index">
+    <%#= render "task_index", tasks: @tasks_commencement %>
+  </div>
+  <div id="task-completion-index">
+    <%#= render "task_index", tasks: @tasks_completion %>
+  </div>
 </div>
