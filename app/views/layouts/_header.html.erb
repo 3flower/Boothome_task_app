@@ -12,7 +12,7 @@
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_btn" %>
           </li>
           <li>
-            <%= link_to "ログイン", new_user_session_path, data: {"turbolinks" => false}, class: "header_btn" %>
+            <div class="header_btn login-btn">ログイン</div>
           </li>
       </ul>
     </nav>
