@@ -5,15 +5,18 @@
     </nav>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
           <li>
-            中村　充樹
+            <%= User.name %>
           </li>
           <li>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_btn" %>
           </li>
+        <% else %>
           <li>
             <div class="header_btn login-btn">ログイン</div>
           </li>
+        <% end %>
       </ul>
     </nav>
   </div>

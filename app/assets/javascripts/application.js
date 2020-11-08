@@ -20,7 +20,7 @@
 
 $(function(){
   // ログインモーダル
-  $('#login-btn').click(function(){
+  $('.login-btn').click(function(){
     $('#login-modal').fadeIn();
   });
   $('.close-modal').click(function(){
