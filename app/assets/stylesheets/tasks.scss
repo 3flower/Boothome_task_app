@@ -7,9 +7,10 @@
   width: 35%;
   height: 100%;
   padding: 20px;
+  margin-top: 80px;
   // background-color: #EEEEEE;
   float: left;
-  // display: none;
+  position: fixed;
 }
 h2 {
   text-align: center;
@@ -61,7 +62,11 @@ label {
   width: 65%;
   float: right;
   background-color: #EEEEEE;
-  height: auto;
+  height: 100%;
+  margin-top: 80px;
+  .task-index {
+    height: 100%;
+  }
   .category-box {
     margin-bottom: 0 !important;
     padding-bottom: 3px;

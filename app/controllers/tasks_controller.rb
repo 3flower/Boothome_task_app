@@ -6,7 +6,7 @@ class TasksController < ApplicationController
     # edit
 
     # index
-    # binding.pry
+
     @tasks = Task.all
     @tasks_not = Task.where(progress: "未着手")
     @tasks_commencement = Task.where(progress: "着手中")
@@ -14,11 +14,17 @@ class TasksController < ApplicationController
   end
 
   def create
-
+    binding.pry
     @task = current_user.tasks.new(tasks_params)
+    # @task = Task.new(
+    #   title: params[:title],
+    #   content: params[:content],
+    #   progress: params[:progress],
+    #   user_id: @current_user.id
+    #  )
     if @task.save
       # flash[:notice] = "投稿しました"
-      redirect_to root_path
+      redirect_to @task
     else
       render :top
     end

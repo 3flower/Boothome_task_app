@@ -22,6 +22,11 @@
   box-sizing: border-box;
   // color: #6c6b6b;
 }
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
 html {
   height: 100%;
 }
@@ -52,9 +57,11 @@ a:hover {
 
 // header
 header {
+  width: 100%;
   background-color: #3399FF;
   padding: 20px 0;
   color: #fff !important;
+  position: fixed;
 }
 h1 {
   margin: 0;
