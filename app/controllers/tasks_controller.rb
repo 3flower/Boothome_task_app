@@ -1,5 +1,7 @@
 class TasksController < ApplicationController
 
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
+
   def top
     # new
     @task = Task.new
@@ -14,17 +16,10 @@ class TasksController < ApplicationController
   end
 
   def create
-    binding.pry
     @task = current_user.tasks.new(tasks_params)
-    # @task = Task.new(
-    #   title: params[:title],
-    #   content: params[:content],
-    #   progress: params[:progress],
-    #   user_id: @current_user.id
-    #  )
     if @task.save
       # flash[:notice] = "投稿しました"
-      redirect_to @task
+      redirect_to root_path
     else
       render :top
     end
@@ -39,6 +34,6 @@ class TasksController < ApplicationController
   private
 
   def tasks_params
-    params.require(:task).permit(:title, :content, :progress)
+    params.require(:task).permit(:title, :content)
   end
 end
