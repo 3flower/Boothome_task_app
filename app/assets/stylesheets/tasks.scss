@@ -1,4 +1,4 @@
-// Place all the styles related to the tasklists controller here.
+// Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -7,9 +7,10 @@
   width: 35%;
   height: 100%;
   padding: 20px;
-  background-color: #EEEEEE;
+  margin-top: 80px;
+  // background-color: #EEEEEE;
   float: left;
-  // display: none;
+  position: fixed;
 }
 h2 {
   text-align: center;
@@ -43,7 +44,7 @@ label {
   width: 35%;
   height: 100%;
   padding: 20px;
-  background-color: #EEEEEE;
+  // background-color: #EEEEEE;
   float: left;
   .fa-times {
       position: absolute;
@@ -60,6 +61,9 @@ label {
 .index {
   width: 65%;
   float: right;
+  background-color: #EEEEEE;
+  height: auto;
+  margin-top: 80px;
   .category-box {
     margin-bottom: 0 !important;
     padding-bottom: 3px;
@@ -78,6 +82,7 @@ label {
       border: 1px solid #000;
       border-radius: 100px;
       background-color: #FF82B2;
+      cursor: pointer;
     }
     .commencement-box {
       width: 8%;
@@ -86,6 +91,7 @@ label {
       border: 1px solid #000;
       border-radius: 100px;
       background-color: #99FFFF;
+      cursor: pointer;
     }
     .completion-box {
       width: 6%;
@@ -94,6 +100,67 @@ label {
       padding: 2px 5px;
       border: 1px solid #000;
       border-radius: 100px;
+      cursor: pointer;
+    }
+  }
+  .task-index {
+    .index-box {
+      margin: 30px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 10px 20px;
+      .category {
+        .not-box {
+          padding: 2px 5px;
+          border: 1px solid #000;
+          border-radius: 100px;
+          background-color: #FF82B2;
+          cursor: pointer;
+        }
+        .commencement-box {
+          padding: 2px 5px;
+          border: 1px solid #000;
+          border-radius: 100px;
+          background-color: #99FFFF;
+          cursor: pointer;
+        }
+        .completion-box {
+          background-color: #FFFF66;
+          padding: 2px 5px;
+          border: 1px solid #000;
+          border-radius: 100px;
+          cursor: pointer;
+        }
+      }
+      .main-index {
+        width: 100%;
+        display: inline-block;
+        .task-title {
+          width: 85%;
+          margin-bottom: 20px !important;
+        }
+        .task-content {
+          width: 85%;
+          margin-bottom: 20px !important;
+          display: inline-block;
+        }
+        .task-edit {
+          cursor: pointer;
+          color: #fff;
+          text-align: center;
+          width: 10%;
+          display: inline-block;
+          padding: 5px;
+          background-color: #75A9FF;
+          border-radius: 5px;
+        }
+      }
+      .sub-index {
+        width: 100%;
+        .user-index {
+          text-align: right;
+        }
+      }
     }
   }
 }

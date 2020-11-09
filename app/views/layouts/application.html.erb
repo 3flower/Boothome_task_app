@@ -12,6 +12,9 @@
 
   <body>
     <%= render "layouts/header" %>
-      <%= yield %>
+    <%= yield %>
+    <div id="user-modal">
+      <%= render "tasks/login", resource: resource %>
+    </div>
   </body>
 </html>
