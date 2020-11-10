@@ -25,5 +25,5 @@ $(function(){
   });
   $('.close-modal').click(function(){
     $('#login-modal').fadeOut();
-  })
+  });
 });

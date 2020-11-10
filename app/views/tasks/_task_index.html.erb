@@ -1,5 +1,5 @@
-
 <% tasks.each do |task| %>
+  <div class="edit modal" id="<%= task.id %>"></div>
   <div class="task-index">
     <div class="index-box">
       <div class="category">
@@ -23,7 +23,7 @@
         <div class="task-content">
           <h4><%= task.content %></h4>
         </div>
-        <div class="task-edit pull-right" id="edit-btn">編集</div>
+        <%= link_to "編集", edit_task_path(task), method: :get, remote: true, class: "task-edit pull-right edit-btn" %>
       </div>
       <div class="sub-index">
         <div class="file-index"></div>

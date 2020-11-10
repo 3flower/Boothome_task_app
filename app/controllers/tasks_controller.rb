@@ -24,7 +24,18 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   def update
+    @task = Task.find(params[:id])
+    if @task.update(tasks_update_params)
+      # flash[:success] = "更新しました"
+      redirect_to root_path
+   else
+     render :top
+   end
   end
 
   def destroy
@@ -34,5 +45,9 @@ class TasksController < ApplicationController
 
   def tasks_params
     params.require(:task).permit(:title, :content, :in_charge_name)
+  end
+
+  def tasks_update_params
+    params.require(:task).permit(:title, :content, :in_charge_name, :progress)
   end
 end
