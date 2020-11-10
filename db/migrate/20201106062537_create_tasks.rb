@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.string  :title
       t.string  :content
       t.integer :progress, default: 0
-      # 担当者と添付ファイル追加
+      t.string :in_charge_name
 
       t.timestamps
     end
