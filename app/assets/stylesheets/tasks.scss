@@ -33,6 +33,11 @@ label {
     resize: none;
     display: inline-block;
   }
+  .in_charge_name {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px !important;
+  }
 }
 .submit-box {
   margin-right: 30px;
@@ -47,15 +52,22 @@ label {
   // background-color: #EEEEEE;
   float: left;
   .fa-times {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: rgba(128, 128, 128, 0.46);
-      cursor: pointer;
-    }
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+  }
+  .progress {
+    width: 30%;
+    height: 35px;
+    border-radius: 5px !important;
+    background-color: #fff !important;
+  }
 }
 .modal {
   top: 79px !important;
+  background-color: #fff !important;
 }
 // index
 .index {
