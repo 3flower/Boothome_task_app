@@ -30,8 +30,8 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    if @tasl.update(tasks_update_params)
-      flash[:success] = "更新しました"
+    if @task.update(tasks_update_params)
+      # flash[:success] = "更新しました"
       redirect_to root_path
    else
      render :top

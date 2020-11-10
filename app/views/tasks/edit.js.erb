@@ -1,29 +1,6 @@
-// $('.edit-btn').click(function(){
-//   $('#<%= @task.id %>').fadeIn();
-// });
-// $('.close-modal').click(function(){
-//   $('#<%= @task.id %>').fadeOut();
-// })
-$('#<%= @task.id %>').html
-('<h2>タスク編集</h2><div class="form-edit"><%= form_with(model:@task, url:root_path, local:true, method: :post) do |f| %><div class="close-modal"><i class="fa fa-2x fa-times"></i></div>');
 
-$("title-<%= @task.id %>").html
-('<%= f.label :"タイトル" %><%= f.text_field :title, class: "title", id: "edit-title" %>');
-
-$("content-<%= @task.id %>").html
-('<%= f.label :"内容" %><textarea name="content"><%= @task.content %></textarea>');
-
-$("file-<%= @task.id %>").html
-('');
-
-$("in_charge-<%= @task.id %>").html
-('<%= f.label :"担当者" %><%= f.collection_select :in_charge_name, User.all, :name,:name, {}, {class: "in_charge_name", id: "edit_task_in_charge"} %>');
-
-$("progress-<%= @task.id %>").html
-('<%= f.label :"進行度" %><%= f.select :progress, Task.progresses.keys, {}, {class: "progress"} %>');
-
-$("edit-<%= @task.id %>").html
-('<%= f.submit "更新", class: "btn btn-primary pull-right", id:"task-edit-submit" %>');
-
-$("end-<%= @task.id %>").html
-('<% end %>');
+$('#<%= @task.id %>').fadeIn();
+$('#<%= @task.id %>').html("<%= j(render 'edit', task: @task) %>");
+$('.close-modal').click(function(){
+  $('.edit').fadeOut();
+});

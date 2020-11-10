@@ -1,15 +1,5 @@
 <% tasks.each do |task| %>
-  <div class="edit" id="<%= task.id %>">
-    <div class="form-edit">
-      <div class="title-box box" id="title-<%= task.id %>"></div>
-      <div class="content-box box" id="content-<%= task.id %>"></div>
-      <div class="file-box" id="file-<%= task.id %>"></div>
-      <div class="in_charge-box box" id="in_charge-<%= task.id %>"></div>
-      <div class="progress-box box" id="progress-<%= task.id %>"></div>
-      <div class="submit-box" id="edit-<%= task.id %>"></div>
-      <div id="end-<%= task.id %>"></div>
-    </div>
-  </div>
+  <div class="edit modal" id="<%= task.id %>"></div>
   <div class="task-index">
     <div class="index-box">
       <div class="category">
@@ -34,7 +24,6 @@
           <h4><%= task.content %></h4>
         </div>
         <%= link_to "編集", edit_task_path(task), method: :get, remote: true, class: "task-edit pull-right edit-btn" %>
-        <!-- <div class="task-edit pull-right edit-btn">編集</div> -->
       </div>
       <div class="sub-index">
         <div class="file-index"></div>
