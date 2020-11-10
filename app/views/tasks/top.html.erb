@@ -1,3 +1,4 @@
+<!-- new -->
 <div class="new">
   <h2>タスク追加</h2>
   <div class="form-new">
@@ -22,7 +23,12 @@
   </div>
 </div>
 
+<!-- edit -->
+<% @tasks.each do |task| %>
+  <div class="edit modal" id="<%= task.id %>"></div>
+<% end %>
 
+<!-- index -->
 <div class="index clearfix">
   <div class="category-btn">
     <ul class="category-box">
@@ -35,12 +41,12 @@
     <%= render "task_index", tasks: @tasks %>
   </div>
   <div id="task-not-index">
-    <%#= render "task_index", tasks: @tasks_not %>
+    <%= render "task_index", tasks: @tasks_not %>
   </div>
   <div id="task-commencement-index">
-    <%#= render "task_index", tasks: @tasks_commencement %>
+    <%= render "task_index", tasks: @tasks_commencement %>
   </div>
   <div id="task-completion-index">
-    <%#= render "task_index", tasks: @tasks_completion %>
+    <%= render "task_index", tasks: @tasks_completion %>
   </div>
 </div>

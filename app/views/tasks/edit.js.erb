@@ -1,4 +1,3 @@
-
 $('#<%= @task.id %>').fadeIn();
 $('#<%= @task.id %>').html("<%= j(render 'edit', task: @task) %>");
 $('.close-modal').click(function(){
