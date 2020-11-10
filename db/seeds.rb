@@ -13,6 +13,7 @@
     password: "123456"
   )
 end
+
 User.create!(
   name: "中村　充樹",
   email: "3flower.atu87@gmail.com",
@@ -26,6 +27,7 @@ User.create!(
               内容内容内容内容内容内容内容内容
               内容内容内容内容内容内容内容内容
               内容内容内容内容内容内容内容内容
-              内容内容内容内容内容内容内容内容"
+              内容内容内容内容内容内容内容内容",
+    in_charge_name: "テストユーザー#{n + 1}"
   )
 end

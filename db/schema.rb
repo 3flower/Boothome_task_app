@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_062537) do
     t.string "title"
     t.string "content"
     t.integer "progress", default: 0
+    t.string "in_charge_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

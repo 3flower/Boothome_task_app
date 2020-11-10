@@ -8,7 +8,6 @@ class TasksController < ApplicationController
     # edit
 
     # index
-
     @tasks = Task.all
     @tasks_not = Task.where(progress: "未着手")
     @tasks_commencement = Task.where(progress: "着手中")
@@ -34,6 +33,6 @@ class TasksController < ApplicationController
   private
 
   def tasks_params
-    params.require(:task).permit(:title, :content)
+    params.require(:task).permit(:title, :content, :in_charge_name)
   end
 end
