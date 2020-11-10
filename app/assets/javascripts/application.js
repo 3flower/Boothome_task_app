@@ -25,12 +25,5 @@ $(function(){
   });
   $('.close-modal').click(function(){
     $('#login-modal').fadeOut();
-  })
-
-  $('.edit-btn').click(function(){
-    $('#edit-modal').fadeIn();
   });
-  $('.close-modal').click(function(){
-    $('#edit-modal').fadeOut();
-  })
 });
