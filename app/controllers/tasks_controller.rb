@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 
   before_action :authenticate_user!, only: [:create, :update, :destroy]
+  before_action :set_task, only: [:destroy, :edit, :update]
 
   def top
     # new
@@ -25,11 +26,9 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
   end
 
   def update
-    @task = Task.find(params[:id])
     if @task.update(tasks_update_params)
       # flash[:success] = "更新しました"
       redirect_to root_path
@@ -39,6 +38,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @task.destroy
+    redirect_to root_path
   end
 
   private

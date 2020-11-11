@@ -64,6 +64,9 @@ label {
     border-radius: 5px !important;
     background-color: #fff !important;
   }
+  .destroy-btn {
+    margin-left: 20px;
+  }
 }
 .modal {
   top: 79px !important;
@@ -174,5 +177,8 @@ label {
         }
       }
     }
+  }
+  #task-not-index,#task-commencement-index,#task-completion-index {
+    display: none;
   }
 }

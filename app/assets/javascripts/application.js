@@ -26,4 +26,24 @@ $(function(){
   $('.close-modal').click(function(){
     $('#login-modal').fadeOut();
   });
+
+  // indexタグ検索
+  $('#not-btn').click(function(){
+    $('#task-not-index').fadeIn();
+    $('#task-commencement-index').fadeOut();
+    $('#task-completion-index').fadeOut();
+    $('#task-all-index').fadeOut();
+  });
+  $('#commencement-btn').click(function(){
+    $('#task-not-index').fadeOut();
+    $('#task-commencement-index').fadeIn();
+    $('#task-completion-index').fadeOut();
+    $('#task-all-index').fadeOut();
+  });
+  $('#completion-btn').click(function(){
+    $('#task-not-index').fadeOut();
+    $('#task-commencement-index').fadeOut();
+    $('#task-completion-index').fadeIn();
+    $('#task-all-index').fadeOut();
+  });
 });
