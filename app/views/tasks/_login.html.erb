@@ -5,10 +5,12 @@
         <div class="close-modal">
           <i class="fa fa-2x fa-times"></i>
         </div>
+
         <h2 class="login-h2">ログイン</h2>
+        
         <div class="field mail">
           <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-sm-11 from-mail" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-sm-11 from-mail", id: "login_email" %>
         </div>
 
         <div class="field password">
@@ -24,12 +26,9 @@
         <% end %>
 
         <div class="actions submit-login">
-          <%= f.submit "ログイン", class: "btn btn-warning col-sm-11 btn-login" %>
+          <%= f.submit "ログイン", data: {"turbolinks" => false}, class: "btn btn-warning col-sm-11 btn-login" %>
         </div>
       <% end %>
-      <div class="new-user col-sm-12">
-        <%#= link_to "招待する", _path, data: {"turbolinks" => false}, class: "btn btn-default col-sm-11" %>
-      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+<div class="modal" id="invitation-modal">
+  <div class="invitation-new col-sm-5">
+    <div class="invitation-box">
+      <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post , id: :aaa }) do |f| %>
+      
+        <div class="close-modal">
+          <i class="fa fa-2x fa-times"></i>
+        </div>
+
+        <h2 class="invitation-h2">招待</h2>
+
+        <% resource.class.invite_key_fields.each do |field| -%>
+          <div class="field mail">
+            <%= f.email_field :email, class: "col-sm-11 from-mail", placeholder: "招待したい人のメールアドレスを入力して下さい" %>
+          </div>
+        <% end -%>
+
+        <div class="actions submit-invitation">
+          <%= f.submit "招待する", class: "btn btn-warning col-sm-11 btn-invitation" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

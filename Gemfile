@@ -48,6 +48,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # テスト環境のメール確認
+  gem 'letter_opener'
 end
 
 group :test do
@@ -62,10 +65,20 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 追加
-gem "devise"
+
+# CSSフレームワーク
 gem "jquery-rails"
 gem "jquery-turbolinks"
 gem "bootstrap-sass", "~> 3.4.1"
+
+# デバック
 gem "pry-byebug"
+
+# ENV
 gem "dotenv-rails"
+
+# デバイス
 gem "rails-i18n"
+gem "devise-i18n"
+gem "devise"
+gem "devise_invitable"
