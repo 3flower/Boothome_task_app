@@ -14,11 +14,11 @@
   )
 end
 
-User.create!(
-  name: "中村　充樹",
-  email: "3flower.atu87@gmail.com",
-  password: "atuki1125"
-)
+# User.create!(
+#   name: "中村　充樹",
+#   email: "3flower.atu87@gmail.com",
+#   password: "atuki1125"
+# )
 5.times do |n|
   Task.create!(
     user_id: n + 1,
@@ -31,3 +31,4 @@ User.create!(
     in_charge_name: "テストユーザー#{n + 1}"
   )
 end
+# User.invite!(email: "3flower.atu87@gmail.com")

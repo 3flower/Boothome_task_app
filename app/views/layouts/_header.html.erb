@@ -6,11 +6,18 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li>
-            <%= current_user.name %>
-          </li>
-          <li>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_btn" %>
+          <li class="dropdown">
+            <%= link_to "#", class: "header-name",'data-toggle': :dropdown do %>
+              <%= current_user.name %>
+            <% end %>
+            <ul class="dropdown-menu dropdown-link">
+              <li class="user_dropdown">
+                <%= link_to "招待", "#", data: {"turbolinks" => false}, class: "invitation-btn dropdown_btn" %>
+              </li>
+              <li class="user_dropdown">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: {"turbolinks" => false}, class: "dropdown_btn" %>
+              </li>
+            </ul>
           </li>
         <% else %>
           <li>
