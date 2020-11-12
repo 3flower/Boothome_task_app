@@ -1,25 +1,26 @@
-<h2><%= t "devise.invitations.edit.header" %></h2>
+<div class="invitation-edit col-sm-5">
+  <div class="invitation-box">
 
-<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :invitation_token %>
+    <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :invitation_token %>
+      <h2 class="invitation-h2">アカウント発行</h2>
 
-　   <div class="field">
-    <%= f.text_field :name, autofocus: true, autocomplete: "off", class: "form-control", placeholder: "氏名（本名）を入力してください" %>
+    　<div class="field mail">
+        <%= f.text_field :name, autofocus: true, autocomplete: "off", class: "col-sm-11 from-mail", placeholder: "氏名（本名）を入力してください" %>
+      </div>
+
+      <div class="field password">
+        <%= f.password_field :password, autofocus: true, autocomplete: "off", class: "col-sm-11 from-password", placeholder: "パスワード(6文字以上)" %>
+      </div>
+
+      <div class="field password">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "col-sm-11 from-password", placeholder: "パスワード(確認)" %>
+      </div>
+
+      <div class="actions submit-invitation">
+        <%= f.submit "アカウントを発行する", data: {"turbolinks" => false}, class: "btn btn-info col-sm-11" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <br>
-    <%= f.password_field :password, autofocus: true, autocomplete: "off", class: "form-control", placeholder: "NEW PASSWORD" %>
-  </div>
-
-  <div class="field">
-    <br>
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "CONFIRM NEW PASSWORD" %>
-  </div>
-
-  <div class="actions">
-    <br>
-    <%= f.submit t("devise.invitations.edit.submit_button"), class: "btn btn-info btn-block" %>
-  </div>
-<% end %>
+</div>

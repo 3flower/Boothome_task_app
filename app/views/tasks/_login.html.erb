@@ -24,12 +24,9 @@
         <% end %>
 
         <div class="actions submit-login">
-          <%= f.submit "ログイン", class: "btn btn-warning col-sm-11 btn-login" %>
+          <%= f.submit "ログイン", data: {"turbolinks" => false}, class: "btn btn-warning col-sm-11 btn-login" %>
         </div>
       <% end %>
-      <div class="new-user col-sm-12">
-        <%#= link_to "招待する", _path, data: {"turbolinks" => false}, class: "btn btn-default col-sm-11" %>
-      </div>
     </div>
   </div>
 </div>

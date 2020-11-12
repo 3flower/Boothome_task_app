@@ -1,4 +1,4 @@
-<p><%= t(email: @resource.email) %>　様</p>
+<p><%= t("devise.mailer.invitation_instructions.hello", email: @resource.email) %>　様</p>
 
 <p><%= t("devise.mailer.invitation_instructions.someone_invited_you", url: root_url) %></p>
 
@@ -9,3 +9,5 @@
 <% end %>
 
 <p><%= t("devise.mailer.invitation_instructions.ignore") %></p>
+
+<p><%= t("devise.mailer.invitation_instructions.ignore2") %></p>

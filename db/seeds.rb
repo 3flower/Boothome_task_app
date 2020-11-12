@@ -31,4 +31,3 @@ end
     in_charge_name: "テストユーザー#{n + 1}"
   )
 end
-# User.invite!(email: "3flower.atu87@gmail.com")

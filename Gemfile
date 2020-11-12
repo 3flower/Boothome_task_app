@@ -79,6 +79,7 @@ gem "dotenv-rails"
 
 # デバイス
 gem "rails-i18n"
+gem "devise-i18n"
 gem "devise"
 gem "devise_invitable"
   # いらなかった
