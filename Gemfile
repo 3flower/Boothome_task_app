@@ -62,10 +62,20 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 追加
-gem "devise"
+
+# CSSフレームワーク
 gem "jquery-rails"
 gem "jquery-turbolinks"
 gem "bootstrap-sass", "~> 3.4.1"
+
+# デバック
 gem "pry-byebug"
+
+# ENV
 gem "dotenv-rails"
+
+# デバイス
 gem "rails-i18n"
+gem "devise"
+gem "devise_invitable"
+gem "omniauth-google-oauth2"

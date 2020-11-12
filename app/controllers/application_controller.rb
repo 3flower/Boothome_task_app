@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up,keys: [:name, :email])
 
   		devise_parameter_sanitizer.permit(:sign_in, keys: [:email])
+
+      # :inviteと:accept_invitationに:usernameを許可する
+      devise_parameter_sanitizer.for(:invite) { |u| u.permit(:email, :username) }
+      devise_parameter_sanitizer.for(:accept_invitation) { |u| u.permit(:password, :password_confirmation, :invitation_token, :username) }
     end
 
   private
