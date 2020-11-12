@@ -2,12 +2,13 @@
   <div class="login col-sm-5">
     <div class="login-box">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= render "layouts/error_messages", resource: resource %>
         <div class="close-modal">
           <i class="fa fa-2x fa-times"></i>
         </div>
 
         <h2 class="login-h2">ログイン</h2>
-        
+
         <div class="field mail">
           <%= f.label :メールアドレス %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-sm-11 from-mail", id: "login_email" %>
