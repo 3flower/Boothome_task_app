@@ -1,5 +1,4 @@
 <% tasks.each do |task| %>
-
   <div class="task-index">
     <div class="index-box">
       <div class="category">
@@ -7,9 +6,11 @@
           <% if task.progress == "未着手" %>
             <li class="not-box">未</li>
           <% end %>
+
           <% if task.progress == "着手中" %>
             <li class="commencement-box">着</li>
           <% end %>
+          
           <% if task.progress == "完了" %>
             <li class="completion-box">完</li>
           <% end %>
@@ -20,13 +21,17 @@
         <div class="task-title">
           <h4><%= task.title %></h4>
         </div>
+
         <div class="task-content">
           <h4><%= task.content %></h4>
         </div>
+
         <%= link_to "編集", edit_task_path(task), method: :get, remote: true, class: "task-edit pull-right edit-btn" %>
       </div>
+
       <div class="sub-index">
         <div class="file-index"></div>
+
         <div class="user-index">
           <ul>
             <li>担当者：<%= task.in_charge_name %></li>

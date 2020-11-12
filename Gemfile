@@ -82,5 +82,3 @@ gem "rails-i18n"
 gem "devise-i18n"
 gem "devise"
 gem "devise_invitable"
-  # いらなかった
-  # gem "omniauth-google-oauth2"
