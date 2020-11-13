@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
-    registrations: 'users/registrations',
-    passwords: 'users/passwords',
     invitations: 'users/invitations'
   }
+  # devise_scope :users do
+  #   get 'login', to: 'devise/sessions#new'
+  #   post 'login', to: 'devise/sessions#create'
+  #   delete 'signout', to: 'devise/sessions#destroy'
+  # end
 end

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
     #ログアウト時のパス
     def after_sign_out_path_for(resource)
-      root_path
+      new_user_session_path
     end
 
     # 新規登録の保存機能

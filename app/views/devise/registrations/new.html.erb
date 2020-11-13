@@ -5,7 +5,7 @@
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "layouts/error_messages", resource: resource %>
-        <div class="sigin-right col-xs-7">
+        <div class="sigin-right col-xs-12">
           <div class="form-group col-xs-12">
             <%= f.label :"名前", class: "control-label" %><span class="required">必須</span>
             <%= f.text_field :name, autofocus: true, class: "form-control-static name" %>
@@ -26,24 +26,9 @@
           </div>
         </div>
 
-        <div class="sigin-left col-xs-3">
-          <p>アイコン</p>
-          <label for="user_image">
-            <div class="form_icon">
-              <%= image_tag "default.png",class: "icon", id: "preview" %>
-              <%= f.file_field :user_image_id, type: 'file', id: "user_image"  %>
-            </div>
-          </label>
-          <div class ="icon_remove">
-            削除する
-          </div>
-        </div>
         <div class="col-xs-12">
           <div class="actions text-center">
             <%= f.submit "新規登録",class: "btn btn-success submit-signin" %>
-          </div>
-          <div class="link-back">
-            <%= link_to "戻る", root_path, data: {"turbolinks" => false}, class: "btn-link" %>
           </div>
         </div>
       <% end %>
