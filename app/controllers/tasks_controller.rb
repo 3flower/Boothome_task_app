@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-  before_action :authenticate_user!# , only: [:create, :update, :destroy]
+  before_action :authenticate_user!
   before_action :set_task, only: [:destroy, :edit, :update]
   before_action :set_task_index, only: [:top, :destroy, :update, :create]
 
@@ -20,7 +20,6 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(tasks_update_params)
-      # flash[:success] = "更新しました"
     end
   end
 
