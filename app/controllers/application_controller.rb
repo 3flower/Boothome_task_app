@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActionController::RoutingError,   with: :routing_error
 
   def routing_error
-    render template: "tasks/top"
+    redirect_to root_path
   end
 
   protected
