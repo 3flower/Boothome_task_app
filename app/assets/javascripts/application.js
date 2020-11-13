@@ -19,21 +19,6 @@
 //= require_tree .
 
 $(function(){
-  // ログインモーダル
-  $('.login-btn').click(function(){
-    $('#login-modal').fadeIn();
-  });
-  $('.close-modal').click(function(){
-    $('#login-modal').fadeOut();
-  });
-
-  // invitationモーダル
-  $('.invitation-btn').click(function(){
-    $('#invitation-modal').fadeIn();
-  });
-  $('.close-modal').click(function(){
-    $('#invitation-modal').fadeOut();
-  });
 
   // indexタグ検索
   $('#not-btn').click(function(){

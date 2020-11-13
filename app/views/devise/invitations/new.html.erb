@@ -1,16 +1,25 @@
-<h2>招待</h2>
+<div class="invitation-new col-sm-5">
+  <div class="invitation-box">
+    <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post , id: :aaa }) do |f| %>
+    <%= render "layouts/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="close-modal">
+        <%= link_to root_path, class: "close-btn"  do %>
+          <i class="fa fa-2x fa-times"></i>
+        <% end %>
+      </div>
 
-  <% resource.class.invite_key_fields.each do |field| -%>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.text_field :email, class: "form-control", placeholder: "招待したい人のメールアドレスを入力して下さい" %>
-    </div>
-  <% end -%>
+      <h2 class="invitation-h2">招待</h2>
 
-  <div class="actions">
-    <%= f.submit "招待", class: "btn btn-info btn-block" %>
+      <% resource.class.invite_key_fields.each do |field| -%>
+        <div class="field mail">
+          <%= f.email_field :email, class: "col-sm-11 from-mail", placeholder: "招待したい人のメールアドレスを入力して下さい" %>
+        </div>
+      <% end -%>
+
+      <div class="actions submit-invitation">
+        <%= f.submit "招待する", class: "btn btn-warning col-sm-11 btn-invitation" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

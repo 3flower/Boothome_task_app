@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 
-  before_action :authenticate_user!, only: [:create, :update, :destroy]
+  before_action :authenticate_user!# , only: [:create, :update, :destroy]
   before_action :set_task, only: [:destroy, :edit, :update]
 
   def top

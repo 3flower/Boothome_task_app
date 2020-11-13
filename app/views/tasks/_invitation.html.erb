@@ -2,6 +2,7 @@
   <div class="invitation-new col-sm-5">
     <div class="invitation-box">
       <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post , id: :aaa }) do |f| %>
+      <%= render "layouts/error_messages", resource: resource %>
       
         <div class="close-modal">
           <i class="fa fa-2x fa-times"></i>
