@@ -1,6 +1,6 @@
 <h2>タスク編集</h2>
 <div class="form-edit">
-  <%= form_with(model:task, url:task_path, local:true, method: :patch) do |f| %>
+  <%= form_with(model:task, url:task_path, method: :patch) do |f| %>
   <%= render "layouts/error_messages", resource: task %>
 
     <div class="close-modal">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="submit-box">
-      <%= link_to "削除", task_path(task), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, class: "btn btn-danger pull-right destroy-btn" %>
+      <%= link_to "削除", task_path(task), method: :delete, data: {confirm: "本当に削除してもよろしいですか？"}, remote: true, class: "btn btn-danger pull-right destroy-btn" %>
       <%= f.submit "更新", class: "btn btn-primary pull-right", id:"task-edit-submit" %>
     </div>
   <% end %>

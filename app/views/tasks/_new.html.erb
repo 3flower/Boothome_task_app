@@ -1,0 +1,27 @@
+<h2>タスク追加</h2>
+<div class="form-new">
+  <%= form_with(model:task, url:tasks_path, method: :post) do |f| %>
+  <%= render "layouts/error_messages", resource: @task %>
+
+    <div class="title-box box">
+      <%= f.label :"タイトル" %>
+      <%= f.text_field :title, class: "title", id: "new-title" %>
+    </div>
+
+    <div class="content-box box">
+      <%= f.label :"内容" %>
+      <%= f.text_area :content, class: "content", id: "new-content" %>
+    </div>
+
+    <div class="file-box"></div>
+
+    <div class="in_charge-box box">
+      <%= f.label :"担当者" %>
+      <%= f.collection_select :in_charge_name, User.all, :name,:name, {prompt: "-- 選択してください --"}, {class: "in_charge_name"} %>
+    </div>
+
+    <div class="submit-box">
+      <%= f.submit "追加", class: "btn btn-primary pull-right", id:"task-new-submit" %>
+    </div>
+  <% end %>
+</div>

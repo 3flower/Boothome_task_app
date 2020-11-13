@@ -1,6 +1,6 @@
 <% tasks.each do |task| %>
-  <div class="task-index">
-    <div class="index-box" id="Ajax-<% task.id %>">
+  <div class="task-index" id="Ajax-<%= task.id %>">
+    <div class="index-box">
       <div class="category">
         <ul class="pull-right">
           <% if task.progress == "未着手" %>

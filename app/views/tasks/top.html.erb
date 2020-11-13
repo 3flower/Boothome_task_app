@@ -1,43 +1,18 @@
 <!-- new -->
-<div class="new">
-  <h2>タスク追加</h2>
-  <div class="form-new">
-    <%= form_with(model:@task, url:tasks_path, local:true, method: :post) do |f| %>
-    <%= render "layouts/error_messages", resource: @task %>
-
-      <div class="title-box box">
-        <%= f.label :"タイトル" %>
-        <%= f.text_field :title, class: "title", id: "new-title" %>
-      </div>
-
-      <div class="content-box box">
-        <%= f.label :"内容" %>
-        <%= f.text_area :content, class: "content", id: "new-content" %>
-      </div>
-
-      <div class="file-box"></div>
-
-      <div class="in_charge-box box">
-        <%= f.label :"担当者" %>
-        <%= f.collection_select :in_charge_name, User.all, :name,:name, {prompt: "-- 選択してください --"}, {class: "in_charge_name"} %>
-      </div>
-
-      <div class="submit-box">
-        <%= f.submit "追加", class: "btn btn-primary pull-right", id:"task-new-submit" %>
-      </div>
-    <% end %>
-  </div>
+<div class="new" id="new">
+  <%= render "new", task: @task %>
 </div>
 
 
 <!-- edit -->
-<% @tasks.each do |task| %>
-  <div class="edit modal" id="<%= task.id %>"></div>
-<% end %>
+<div id="edit_index">
+  <%= render "edit_index", tasks: @tasks %>
+</div>
+
 
 
 <!-- index -->
-<div class="index clearfix" id="destroy-Ajsx">
+<div class="index clearfix">
   <div class="category-btn">
     <ul class="category-box">
       <li class="not-box" id="not-btn">未着手</li>
