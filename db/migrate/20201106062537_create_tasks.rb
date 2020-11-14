@@ -6,7 +6,8 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.string  :title
       t.string  :content
       t.integer :progress, default: 0
-      t.string :in_charge_name
+      t.string  :in_charge_name
+      # t.string  :file
 
       t.timestamps
     end
