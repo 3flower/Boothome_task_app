@@ -40,6 +40,9 @@ $(function(){
     $('#task-all-index').fadeOut();
   });
 
+  // フラッシュメッセージを時間でフェイドアウトする
+  setTimeout("$('#flash').fadeOut('slow')", 2000);
+
   // バリデーション(disabled)
     // new
     // $('#task-new-submit').attr('disabled', 'disabled');

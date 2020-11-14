@@ -1,5 +1,5 @@
 <!-- new -->
-<div class="new" id="new">
+<div class="new clearfix" id="new">
   <%= render "new", task: @task %>
 </div>
 
@@ -10,9 +10,11 @@
 </div>
 
 
-
 <!-- index -->
 <div class="index clearfix">
+  <div id="flash">
+    <%= render "layouts/flash" %>
+  </div>
   <div class="category-btn">
     <ul class="category-box">
       <li class="not-box" id="not-btn">未着手</li>

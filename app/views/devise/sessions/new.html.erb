@@ -1,16 +1,27 @@
+<div id="flash">
+  <%= render "layouts/flash" %>
+</div>
 <div class="login col-sm-5">
   <div class="login-box">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <h2 class="login-h2">ログイン</h2>
 
+      <div class="login_flash">
+        <% if flash[:alert] %>
+          <div class="danger">
+            <span id="alert"><%= flash[:alert] %></span>
+          </div>
+        <% end %>
+      </div>
+
       <div class="field mail">
-        <%= f.label :メールアドレス %><br />
+        <%= f.label :メールアドレス %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-sm-11 from-mail", id: "login_email" %>
       </div>
 
       <div class="field password">
-        <%= f.label :パスワード %><br />
+        <%= f.label :パスワード %>
         <%= f.password_field :password, autocomplete: "current-password", class: "col-sm-11 from-password" %>
       </div>
 

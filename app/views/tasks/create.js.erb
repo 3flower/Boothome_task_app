@@ -4,3 +4,6 @@ $('#task-not-index').html("<%= j(render 'task_index', tasks: @tasks_not) %>");
 $('#task-commencement-index').html("<%= j(render 'task_index', tasks: @tasks_commencement) %>");
 $('#task-completion-index').html("<%= j(render 'task_index', tasks: @tasks_completion) %>");
 $('#edit_index').html("<%= j(render 'edit_index', tasks: @tasks) %>");
+$('#flash').html("<%= j(render 'layouts/flash') %>");
+$('#flash').show();
+setTimeout("$('#flash').fadeOut('slow')", 2000);

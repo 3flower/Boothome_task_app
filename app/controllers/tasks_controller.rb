@@ -12,6 +12,7 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.new(tasks_params)
     if @task.save
+      flash.now[:success] = "追加しました"
     end
   end
 
@@ -20,11 +21,13 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(tasks_update_params)
+      flash.now[:success] = "更新しました"
     end
   end
 
   def destroy
     @task.destroy
+    flash.now[:notice] = "削除しました"
   end
 
   private
