@@ -1,8 +1,7 @@
 <h2>タスク編集</h2>
 <div class="form-edit">
   <%= form_with(model:task, url:task_path, method: :patch) do |f| %>
-  <%= render "layouts/error_messages", resource: task %>
-
+    <div id="error"></div>
     <div class="close-modal">
       <i class="fa fa-2x fa-times"></i>
     </div>

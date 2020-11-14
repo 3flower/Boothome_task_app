@@ -1,5 +1,9 @@
-$('#<%= @task.id %>').fadeOut();
-$('#task-all-index').html("<%= j(render 'task_index', tasks: @tasks) %>");
-$('#task-not-index').html("<%= j(render 'task_index', tasks: @tasks_not) %>");
-$('#task-commencement-index').html("<%= j(render 'task_index', tasks: @tasks_commencement) %>");
-$('#task-completion-index').html("<%= j(render 'task_index', tasks: @tasks_completion) %>");
+<% if @task.errors.any? %>
+  $('#error').html("<%= j(render 'layouts/error_messages', resource: @task) %>");
+<% else %>
+  $('#<%= @task.id %>').fadeOut();
+  $('#task-all-index').html("<%= j(render 'task_index', tasks: @tasks) %>");
+  $('#task-not-index').html("<%= j(render 'task_index', tasks: @tasks_not) %>");
+  $('#task-commencement-index').html("<%= j(render 'task_index', tasks: @tasks_commencement) %>");
+  $('#task-completion-index').html("<%= j(render 'task_index', tasks: @tasks_completion) %>");
+<% end %>

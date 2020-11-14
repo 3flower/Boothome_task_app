@@ -39,4 +39,22 @@ $(function(){
     $('#task-completion-index').fadeIn();
     $('#task-all-index').fadeOut();
   });
+
+  // バリデーション(disabled)
+    // new
+    // $('#task-new-submit').attr('disabled', 'disabled');
+    // $('#new-title').bind('keydown keyup keypress change', function() {
+    //   if ( $(this).val().length > 0 ) {
+    //     $('#task-new-submit').removeAttr('disabled');
+    //   } else {
+    //     $('#task-new-submit').attr('disabled', 'disabled');
+    //   }
+    // });
+    // if ($('#new-title').val().length > 0) {
+    //   $('#task-new-submit').attr('disabled');
+    // } else {
+    //   $('#task-new-submit').removeAttr('disabled');
+    // }
+    // var a = $('#new-title').val().length
+    // console.log(a)
 });
