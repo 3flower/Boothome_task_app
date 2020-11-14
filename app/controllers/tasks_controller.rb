@@ -1,27 +1,18 @@
 class TasksController < ApplicationController
 
-  before_action :authenticate_user!# , only: [:create, :update, :destroy]
+  before_action :authenticate_user!
   before_action :set_task, only: [:destroy, :edit, :update]
+  before_action :set_task_index, only: [:top, :destroy, :update, :create]
 
   def top
     # new
     @task = Task.new
-    # edit
-
-    # index
-    @tasks = Task.all
-    @tasks_not = Task.where(progress: "未着手")
-    @tasks_commencement = Task.where(progress: "着手中")
-    @tasks_completion = Task.where(progress: "完了")
   end
 
   def create
     @task = current_user.tasks.new(tasks_params)
     if @task.save
-      # flash[:notice] = "投稿しました"
-      redirect_to root_path
-    else
-      render :top
+      flash.now[:success] = "追加しました"
     end
   end
 
@@ -30,16 +21,13 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(tasks_update_params)
-      # flash[:success] = "更新しました"
-      redirect_to root_path
-   else
-     render :top
-   end
+      flash.now[:success] = "更新しました"
+    end
   end
 
   def destroy
     @task.destroy
-    redirect_to root_path
+    flash.now[:notice] = "削除しました"
   end
 
   private

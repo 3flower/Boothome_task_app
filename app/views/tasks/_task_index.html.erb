@@ -1,5 +1,5 @@
 <% tasks.each do |task| %>
-  <div class="task-index">
+  <div class="task-index" id="Ajax-<%= task.id %>">
     <div class="index-box">
       <div class="category">
         <ul class="pull-right">
@@ -10,7 +10,7 @@
           <% if task.progress == "着手中" %>
             <li class="commencement-box">着</li>
           <% end %>
-          
+
           <% if task.progress == "完了" %>
             <li class="completion-box">完</li>
           <% end %>

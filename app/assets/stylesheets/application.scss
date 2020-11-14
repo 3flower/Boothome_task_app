@@ -54,6 +54,43 @@ a:hover {
 .navbar-nav > li > a {
   padding: 0;
 }
+.fa-times {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+// error
+#error_explanation {
+  color: red;
+}
+
+// flash
+.login_flash {
+  color: red;
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+.flash{
+  position: fixed;
+  top: 80px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.20);
+	padding: 7px;
+	font-weight:bold;
+	&.notice{
+		background-color:#dbffed;
+		color:#03622f;
+	}
+	&.success{
+		background-color:#dbedff;
+		color:#032f62;
+	}
+}
 
 // header
 header {
@@ -76,18 +113,7 @@ nav ul li {
   opacity: 0.7;
   cursor: pointer;
 }
-.fa-times {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: rgba(128, 128, 128, 0.46);
-  cursor: pointer;
-}
 // ログイン
-.modal {
-  z-index: 100 !important;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 .login {
   width: 600px;
   height: 450px;
@@ -106,11 +132,11 @@ nav ul li {
       margin-left: 20px;
   }
   .mail {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     margin-left: 30px;
   }
   .password {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     margin-left: 30px;
   }
   .from-mail, .from-password {
@@ -121,6 +147,9 @@ nav ul li {
   .remember {
     margin-bottom: 20px;
     margin-left: 30px;
+    label {
+      display: inline-block !important;
+    }
   }
   .submit-login {
     margin-bottom: 80px;

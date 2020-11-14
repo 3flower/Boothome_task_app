@@ -2,6 +2,17 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
+  # エラー404が出た時の例外処理
+  # 例外ハンドル
+  rescue_from Exception,                        with: :routing_error
+  rescue_from ActiveRecord::RecordNotFound,     with: :routing_error
+  rescue_from ActionController::RoutingError,   with: :routing_error
+
+  def routing_error
+    redirect_to root_path
+  end
+
   protected
     # ログイン時のパス
     def after_sign_in_path_for(resource)
@@ -27,5 +38,12 @@ class ApplicationController < ActionController::Base
 
     def set_task
       @task = Task.find(params[:id])
+    end
+
+    def set_task_index
+      @tasks = Task.all
+      @tasks_not = Task.where(progress: "未着手")
+      @tasks_commencement = Task.where(progress: "着手中")
+      @tasks_completion = Task.where(progress: "完了")
     end
 end

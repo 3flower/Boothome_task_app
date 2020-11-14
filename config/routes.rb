@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   root 'tasks#top'
 
   devise_for :users, skip: [:password, :registration]
+
+  # エラー処理　404
+  get '*not_found' => 'application#routing_error'
+  post '*not_found' => 'application#routing_error'
 end
