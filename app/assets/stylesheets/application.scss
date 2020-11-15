@@ -32,6 +32,7 @@ html {
 }
 body {
   height: 100%;
+  background-color: #D7EEFF;
 }
 input, textarea {
   border-radius:5px;
@@ -87,7 +88,7 @@ a:hover {
 		color:#03622f;
 	}
 	&.success{
-		background-color:#dbedff;
+		background-color:#FFFF77;
 		color:#032f62;
 	}
 }
@@ -251,5 +252,20 @@ nav ul li {
   }
   .btn-invitation:hover {
     background: #f0c14b;
+  }
+}
+
+// footer
+footer {
+  width: 100%;
+  background-color: #3399FF;
+  padding: 10px 0;
+  color: #fff !important;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  p {
+    margin: 0;
   }
 }

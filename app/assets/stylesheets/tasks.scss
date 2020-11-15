@@ -8,20 +8,23 @@
   height: 100%;
   padding: 20px;
   margin-top: 80px;
-  // background-color: #EEEEEE;
+  background-color: #C2EEFF;
   float: left;
   position: fixed;
+  border-right: 1px solid rgba(128, 128, 128, 0.46);
 }
 h2 {
   text-align: center;
-  margin-bottom: 30px !important;
+  font-size: 28px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 label {
   display: block !important;
   margin-bottom: 10px !important;
 }
 .box {
-  margin: 40px 10px;
+  margin: 15px 10px;
   .title {
     padding: 5px;
     width: 100%;
@@ -49,11 +52,12 @@ label {
   width: 35%;
   height: 100%;
   padding: 20px;
-  // background-color: #EEEEEE;
-  float: left;
+  background-color: #FFF;
+  border-right: 1px solid rgba(128, 128, 128, 0.46);
+  background-color: #C2EEFF;
   .progress {
     width: 30%;
-    height: 35px;
+    height: 30px;
     border-radius: 5px !important;
     background-color: #fff !important;
   }
@@ -63,15 +67,15 @@ label {
 }
 .modal {
   top: 79px !important;
-  background-color: #fff !important;
+  // background-color: #fff !important;
 }
 // index
 .index {
   width: 65%;
   float: right;
-  background-color: #EEEEEE;
   height: auto;
   margin-top: 80px;
+  margin-bottom: 50px;
   .category-box {
     margin-bottom: 0 !important;
     padding-bottom: 3px;

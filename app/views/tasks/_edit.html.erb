@@ -16,7 +16,7 @@
       <%= f.text_area :content, class: "content", id: "edit-content" %>
     </div>
 
-    <div class="file-box">
+    <div class="file-box box">
       <% task.files.each do |file| %>
         <div class="file-name file-<%= file.id %>">
           <%= file.filename %>
