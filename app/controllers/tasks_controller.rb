@@ -33,10 +33,10 @@ class TasksController < ApplicationController
   private
 
   def tasks_params
-    params.require(:task).permit(:title, :content, :in_charge_name)
+    params.require(:task).permit(:title, :content, :in_charge_name, files: [])
   end
 
   def tasks_update_params
-    params.require(:task).permit(:title, :content, :in_charge_name, :progress)
+    params.require(:task).permit(:title, :content, :in_charge_name, :progress, files: [])
   end
 end

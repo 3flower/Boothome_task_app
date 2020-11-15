@@ -16,7 +16,9 @@
       <%= f.text_area :content, class: "content", id: "edit-content" %>
     </div>
 
-    <div class="file-box"></div>
+    <div class="file-box">
+      <%= f.file_field :files, multiple: true %>
+    </div>
 
     <div class="in_charge-box box">
       <%= f.label :"担当者" %>
