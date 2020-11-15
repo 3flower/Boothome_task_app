@@ -30,7 +30,13 @@
       </div>
 
       <div class="sub-index">
-        <div class="file-index"></div>
+        <div class="file-index">
+          <% if task.files.attached? %>
+            <% task.files.each do |file| %>
+              <%= link_to file.filename, rails_blob_path(file, disposition: 'attachment') %><br>
+            <% end %>
+          <% end %>
+        </div>
 
         <div class="user-index">
           <ul>
