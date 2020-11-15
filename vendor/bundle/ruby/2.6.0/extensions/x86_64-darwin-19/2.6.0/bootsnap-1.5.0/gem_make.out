@@ -1,0 +1,15 @@
+current directory: /Users/nakamuraatsuki/Desktop/task_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.0/ext/bootsnap
+/Users/nakamuraatsuki/.rbenv/versions/2.6.5/bin/ruby -I /Users/nakamuraatsuki/.rbenv/versions/2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20201115-14621-1hi6gx9.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nakamuraatsuki/Desktop/task_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/nakamuraatsuki/Desktop/task_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/nakamuraatsuki/Desktop/task_app/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20201115-14621-813deq/bootsnap
