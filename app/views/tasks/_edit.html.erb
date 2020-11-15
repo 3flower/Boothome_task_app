@@ -16,7 +16,13 @@
       <%= f.text_area :content, class: "content", id: "edit-content" %>
     </div>
 
-    <div class="file-box">
+    <div class="file-box box">
+      <% task.files.each do |file| %>
+        <div class="file-name file-<%= file.id %>">
+          <%= file.filename %>
+          <%= link_to '削除', delete_file_attachment_task_url(file),method: :delete,data: {confirm: "本当に削除してもよろしいですか？"}, remote: true, class: "file-destroy-btn" %><br>
+        </div>
+        <% end %>
       <%= f.file_field :files, multiple: true %>
     </div>
 

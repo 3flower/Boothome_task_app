@@ -30,6 +30,11 @@ class TasksController < ApplicationController
     flash.now[:notice] = "削除しました"
   end
 
+  def delete_file_attachment
+    @file = ActiveStorage::Attachment.find(params[:id])
+    @file.purge
+  end
+
   private
 
   def tasks_params
