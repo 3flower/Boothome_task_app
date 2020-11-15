@@ -33,7 +33,9 @@
         <div class="file-index">
           <% if task.files.attached? %>
             <% task.files.each do |file| %>
-              <%= link_to file.filename, rails_blob_path(file, disposition: 'attachment') %><br>
+              <div class="file-<%= file.id %>">
+                <%= link_to file.filename, rails_blob_path(file, disposition: 'attachment') %><br>
+              </div>
             <% end %>
           <% end %>
         </div>
