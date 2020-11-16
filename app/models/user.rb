@@ -3,7 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   devise :invitable,:database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :authentication_keys => [:login], invite_for: 24.hours
+
   has_many :tasks, dependent: :destroy
 
   validates :name, presence: true
