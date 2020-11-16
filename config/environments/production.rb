@@ -27,6 +27,7 @@ Rails.application.configure do
   config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
+
   config.assets.compile = true
   config.assets.compress = true
   config.assets.digest = false
@@ -67,7 +68,8 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "task_app_#{Rails.env}"
-
+  host = 'boothome-task-app'
+  Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
