@@ -15,9 +15,11 @@
   https://docs.google.com/spreadsheets/d/1CI-nifqNPHLXFYkUlxeph0NNrj-JOugv6z2y4dwi2zk/edit?usp=sharing
 
 ## 使用方法
+
   ### ログイン
   
  メールアドレスとパスワードでログインができる 
+ 
  <img width="603" alt="タスク管理ーログイン" src="https://user-images.githubusercontent.com/61017515/99226543-4ae39400-282d-11eb-8988-9cc11f7e1d76.png">
 
   ### タスクの追加
@@ -46,5 +48,7 @@
    名前、パスワードを入れてアカウントを発行すると自動的にログインする。次回からはログイン画面でログインできる
 
    <img width="499" alt="タスク管理ーアカウント発行" src="https://user-images.githubusercontent.com/61017515/99227116-289e4600-282e-11eb-837a-a8b933f499c8.png">
+
+
 
 ## 所要時間
