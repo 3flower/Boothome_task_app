@@ -18,7 +18,7 @@
   ### ログイン
     * メールアドレスとパスワードでログインができる
 
-    <img width="603" alt="タスク管理ーログイン" src="https://user-images.githubusercontent.com/61017515/99226543-4ae39400-282d-11eb-8988-9cc11f7e1d76.png">
+    https://user-images.githubusercontent.com/61017515/99226543-4ae39400-282d-11eb-8988-9cc11f7e1d76.png
 
   ### タスクの追加
     <img width="1189" alt="タスク管理説明１" src="https://user-images.githubusercontent.com/61017515/99226639-6cdd1680-282d-11eb-81d5-222c534aa235.png">
