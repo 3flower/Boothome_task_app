@@ -33,6 +33,7 @@
   ### 招待画面
 
    招待したい人のメールアドレスを入力すると招待メールを送信できる
+   注意：現在作成者しかメールを送信できません。
 
    <img width="500" alt="タスク管理ー招待" src="https://user-images.githubusercontent.com/61017515/99226765-a57cf000-282d-11eb-824a-6683e7302371.png">
 
@@ -52,11 +53,39 @@
 
 ## デプロイurl
 
-https://boothome-task-app.herokuapp.com/users/sign_in
 
-テストアカウント
-mail: test1@test.com
-password: 123456
+
+## 機能
+ CSSフレームワーク
+ * jquery-rails
+ * jquery-turbolinks
+ * bootstrap-sass
+
+ デバイス
+  ログイン、ログアウト
+  * devise
+  招待
+  * devise_invitable
+  エラー、バリデーション日本語化
+  * rails-i18n
+  * devise-i18n
+
+ * 新規投稿、編集、更新、削除をAjaxにて非同期通信
+ * タスクlistに進行度（未着手、着手中、完了）ボタンを追加
+   押すと、その進行度のタスクのみ表示(jQuery)
+ * ファイル添付機能（Active Storage）
+ * 編集画面にてファイル添付を削除（非同期通信）
+
+ 本番環境
+ * heroku
+ * メール配信（MailGun）
+
+ https://boothome-task-app.herokuapp.com/users/sign_in
+
+ テストアカウント
+ mail: test1@test.com
+ password: 123456
+
 
 ## 所要時間
-  ５８時間
+  60時間
