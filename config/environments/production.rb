@@ -68,12 +68,13 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "task_app_#{Rails.env}"
-  host = 'boothome-task-app.heroku.com'
+  config.action_mailer.raise_delivery_errors = true
+  host = 'https://boothome-task-app.herokuapp.com/'
   Rails.application.routes.default_url_options[:host] = host
   # config.action_mailer.default_url_options = { host: 'boothome-task-app.herokuapp.com' }
-  config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
+  # config.action_mailer.perform_caching = false
+  # config.action_mailer.perform_deliveries = true
   # config.action_mailer.smtp_settings = {
   #   :enable_starttls_auto => true,
   #   :address => 'smtp.sendgrid.net',
@@ -94,7 +95,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  config.action_mailer.raise_delivery_errors = true
+
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
