@@ -68,7 +68,7 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "task_app_#{Rails.env}"
-  host = 'sandbox2c7869be80b0455082d151557f0902da.mailgun.org'
+  host = 'boothome-task-app.herokuapp.com'
   Rails.application.routes.default_url_options[:host] = host
   # config.action_mailer.default_url_options = { host: 'boothome-task-app.herokuapp.com' }
   config.action_mailer.perform_caching = false
