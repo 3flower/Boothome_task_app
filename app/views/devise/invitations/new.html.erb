@@ -3,7 +3,7 @@
     <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post , id: :aaa }) do |f| %>
 
       <div class="close-modal">
-        <%= link_to root_path, class: "close-btn"  do %>
+        <%= link_to root_path, data: {"turbolinks" => false}, class: "close-btn"  do %>
           <i class="fa fa-2x fa-times"></i>
         <% end %>
       </div>

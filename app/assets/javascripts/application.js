@@ -42,4 +42,12 @@ $(function(){
 
   // フラッシュメッセージを時間でフェイドアウトする
   setTimeout("$('#flash').fadeOut('slow')", 2000);
+
+  // new表示
+  $('#new-btn').click(function(){
+    $('.new').fadeIn();
+    $('.close-modal').click(function(){
+      $('.new').fadeOut();
+    });
+  });
 });

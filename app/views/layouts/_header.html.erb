@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="nav navbar-nav navbar-left header-title">
       <% if user_signed_in? %>
-        <h1><%= link_to "タスク管理", root_path %></h1>
+        <h1><%= link_to "タスク管理", root_path, data: {"turbolinks" => false} %></h1>
       <% else %>
         <h1>タスク管理</h1>
       <% end %>
@@ -16,6 +16,9 @@
               <%= current_user.name %>
             <% end %>
             <ul class="dropdown-menu dropdown-link">
+              <li class="new-btn" id="new-btn">
+                <p class="dropdown_btn">追加</p>
+              </li>
               <li class="user_dropdown">
                 <%= link_to "招待", new_user_invitation_path, data: {"turbolinks" => false}, class: "invitation-btn dropdown_btn" %>
               </li>
@@ -26,7 +29,7 @@
           </li>
         <% else %>
           <li>
-            <%= link_to "ログイン", new_user_session_path, class: "login-btn" %>
+            <%= link_to "ログイン", new_user_session_path, data: {"turbolinks" => false}, class: "login-btn" %>
           </li>
         <% end %>
       </ul>
