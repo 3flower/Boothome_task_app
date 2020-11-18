@@ -1,0 +1,102 @@
+@media (max-width:425px){
+  // header
+  header {
+    padding-top: 20px !important;
+    padding-bottom: 0 !important;
+    z-index: 2000;
+    h1 {
+      text-align: center;
+    }
+    .navbar-right {
+      text-align: right;
+    }
+    ul {
+      padding-top: 0 !important;
+      padding-bottom: 10px !important;
+    }
+  }
+
+  // login
+  .login {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 15% !important;
+    padding: 50px 0 !important;
+    .login-h2 {
+      margin-bottom: 25px !important;
+      margin-left: 0 !important;
+    }
+    .mail {
+      margin-bottom: 30px !important;
+    }
+    .password {
+      margin-bottom: 30px !important;
+    }
+    .from-mail, .from-password {
+      width: 90% !important;
+    }
+    .submit-login {
+      margin-bottom: 0 !important;
+      margin-right: 30px;
+      float: right;
+    }
+  }
+
+  // new
+  .new {
+    width: 100% !important;
+    margin-top: 112px !important;
+    float: none;
+    display: none;
+    .fa-times {
+      display: block;
+    }
+  }
+
+  // edit
+  .edit {
+    width: 100% !important;
+    top: 112px !important;
+    margin-top: 35px;
+  }
+  .modal {
+    position: absolute !important;
+  }
+
+  // index
+  .index {
+    width: 100% !important;
+    float: none;
+    margin-top: 130px !important;
+    .category-btn {
+      text-align: center;
+      .not-box {
+        width: 15% !important;
+      }
+      .commencement-box {
+        width: 15% !important;
+      }
+      .completion-box {
+        width: 15% !important;
+      }
+    }
+    .task-index {
+      .index-box {
+        margin: 15px 10px !important;
+        .main-index {
+          .task-title {
+            width: 80% !important;
+          }
+          .task-content {
+            width: 80% !important;
+          }
+          .task-edit {
+            width: 15% !important;
+          }
+        }
+      }
+    }
+  }
+}

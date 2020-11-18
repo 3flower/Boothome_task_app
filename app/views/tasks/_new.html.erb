@@ -3,6 +3,10 @@
   <%= form_with(model:task, url:tasks_path, method: :post) do |f| %>
   <%= render "layouts/error_messages", resource: @task %>
 
+    <div class="close-modal">
+      <i class="fa fa-2x fa-times"></i>
+    </div>
+
     <div class="title-box box">
       <%= f.label :"タイトル" %>
       <%= f.text_field :title, class: "title", id: "new-title" %>

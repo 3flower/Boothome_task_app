@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -235,6 +235,9 @@ nav ul li {
   top: 20%;
   .invitation-box {
     padding: 20px 26px;
+  }
+  .invitation-h2 {
+    margin-bottom: 40px !important;
   }
   .mail, .password {
     margin-bottom: 20px;

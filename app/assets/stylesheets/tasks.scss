@@ -12,6 +12,9 @@
   float: left;
   position: fixed;
   border-right: 1px solid rgba(128, 128, 128, 0.46);
+  .fa-times {
+    display: none;
+  }
 }
 h2 {
   text-align: center;
@@ -67,8 +70,8 @@ label {
 }
 .modal {
   top: 79px !important;
-  // background-color: #fff !important;
 }
+
 // index
 .index {
   width: 65%;
