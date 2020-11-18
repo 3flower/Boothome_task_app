@@ -46,6 +46,7 @@ $(function(){
   // new表示
   $('#new-btn').click(function(){
     $('.new').fadeIn();
+    $('.edit').fadeOut();
     $('.close-modal').click(function(){
       $('.new').fadeOut();
     });
