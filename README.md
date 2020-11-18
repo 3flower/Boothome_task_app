@@ -51,10 +51,6 @@
    <img width="499" alt="タスク管理ーアカウント発行" src="https://user-images.githubusercontent.com/61017515/99227116-289e4600-282e-11eb-837a-a8b933f499c8.png">
 
 
-## デプロイurl
-
-
-
 ## 機能
  CSSフレームワーク
  * jquery-rails
@@ -76,6 +72,10 @@
  * ファイル添付機能（Active Storage）
  * 編集画面にてファイル添付を削除（非同期通信）
 
+ モバイル対応（レスポンシブ）
+ * viewport
+ * メディアクエリ
+
  本番環境
  * heroku
  * メール配信（MailGun）
@@ -88,4 +88,4 @@
 
 
 ## 所要時間
-  60時間
+  62時間
