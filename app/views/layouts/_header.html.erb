@@ -16,6 +16,10 @@
               <%= current_user.name %>
             <% end %>
             <ul class="dropdown-menu dropdown-link">
+              <li class="new-btn" id="new-btn">
+                <p class="dropdown_btn">追加</p>
+                <%#= link_to "追加", "#", class: "dropdown_btn" %>
+              </li>
               <li class="user_dropdown">
                 <%= link_to "招待", new_user_invitation_path, data: {"turbolinks" => false}, class: "invitation-btn dropdown_btn" %>
               </li>

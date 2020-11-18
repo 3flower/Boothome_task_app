@@ -101,6 +101,9 @@ header {
   padding: 20px 0;
   color: #fff !important;
   position: fixed;
+  .new-btn {
+    display: none;
+  }
 }
 h1 {
   margin: 0;
@@ -114,6 +117,9 @@ nav ul li {
 .header_btn:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: inherit;
 }
 // ログイン
 .login {
