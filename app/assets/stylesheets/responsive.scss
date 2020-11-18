@@ -12,7 +12,7 @@
     }
     ul {
       padding-top: 0 !important;
-      padding-bottom: 10px !important;
+      padding-bottom: 0 !important;
     }
     .dropdown-menu {
       padding: 20px 0 !important;
@@ -93,39 +93,12 @@
       width: 90% !important;
       margin-top: 20px;
     }
-    // .invitation-box {
-    //   padding: 20px 26px;
-    // }
-    // .invitation-h2 {
-    //   margin-bottom: 40px !important;
-    // }
-    // .mail, .password {
-    //   margin-bottom: 20px;
-    //   margin-left: 30px;
-    // }
-    // .from-mail, .from-password {
-    //   height: 31px;
-    //   border-radius: 5px;
-    //   border-width: 1px;
-    //   float: none;
-    // }
-    // .submit-invitation {
-    //   margin-bottom: 80px;
-    //   margin-left: 30px;
-    // }
-    // .btn-invitation {
-    //   background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-    //   color: inherit;
-    // }
-    // .btn-invitation:hover {
-    //   background: #f0c14b;
-    // }
   }
 
   // new
   .new {
     width: 100% !important;
-    margin-top: 112px !important;
+    margin-top: 100px !important;
     float: none;
     display: none;
     .fa-times {
@@ -143,10 +116,11 @@
   .edit {
     width: 100% !important;
     top: 112px !important;
-    margin-top: 35px;
-  }
-  .modal {
-    position: absolute !important;
+    padding: 10px 20px !important;
+    margin-top: 18px;
+    .progress-box {
+      margin-bottom: 0 !important;
+    }
   }
 
   // index
