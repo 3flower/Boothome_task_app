@@ -49,8 +49,5 @@ $(function(){
     $('.close-modal').click(function(){
       $('.new').fadeOut();
     });
-    // $('#task-new-submit2').click(function(){
-    //   $('.new').fadeOut();
-    // });
   });
 });
