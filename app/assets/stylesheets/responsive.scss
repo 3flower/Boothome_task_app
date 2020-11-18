@@ -30,13 +30,19 @@
     }
   }
 
+  // flash
+  .flash{
+    top: 100px !important;
+    z-index: 9999;
+  }
+
   // login
   .login {
     width: 100% !important;
     height: 100% !important;
     position: fixed !important;
     left: 0 !important;
-    top: 15% !important;
+    top: 100px !important;
     padding: 50px 0 !important;
     .login-h2 {
       margin-bottom: 25px !important;
@@ -56,6 +62,64 @@
       margin-right: 30px;
       float: right;
     }
+  }
+
+  // invitation-new
+  .invitation-new {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 100px !important;
+    padding: 50px 0 !important;
+    .from-mail, .btn-invitation {
+      font-size: 12.5px;
+      width: 90% !important;
+    }
+    .fa-times {
+      top: 40px !important;
+    }
+  }
+
+  // invitation-edit
+  .invitation-edit {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 100px !important;
+    padding: 50px 0 !important;
+    .from-mail, .from-password, .submit-edit-invitation {
+      width: 90% !important;
+      margin-top: 20px;
+    }
+    // .invitation-box {
+    //   padding: 20px 26px;
+    // }
+    // .invitation-h2 {
+    //   margin-bottom: 40px !important;
+    // }
+    // .mail, .password {
+    //   margin-bottom: 20px;
+    //   margin-left: 30px;
+    // }
+    // .from-mail, .from-password {
+    //   height: 31px;
+    //   border-radius: 5px;
+    //   border-width: 1px;
+    //   float: none;
+    // }
+    // .submit-invitation {
+    //   margin-bottom: 80px;
+    //   margin-left: 30px;
+    // }
+    // .btn-invitation {
+    //   background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    //   color: inherit;
+    // }
+    // .btn-invitation:hover {
+    //   background: #f0c14b;
+    // }
   }
 
   // new
