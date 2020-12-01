@@ -81,7 +81,7 @@
  * heroku
  * メール配信（MailGun）
 
- https://boothome-task-app.herokuapp.com/users/sign_in
+ https://atu-task-app.herokuapp.com/
 
  テストアカウント  
  mail: test1@test.com  
